@@ -1,0 +1,140 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f5fb;
+  color: #252b3a;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #3157c8, #7545a8);
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 35px auto;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #ccd2e0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 14px 25px;
+  background: #3157c8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-box button:hover {
+  background: #2444a5;
+}
+
+.search-box button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#status {
+  text-align: center;
+  color: #626b7e;
+  margin: 20px 0;
+}
+
+#resultHeading {
+  margin: 25px 0 15px;
+}
+
+.university-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.university-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e8f0;
+}
+
+.university-card h3 {
+  color: #3157c8;
+  font-size: 18px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.university-card p {
+  margin: 8px 0;
+  color: #555e70;
+  line-height: 1.5;
+}
+
+.university-card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #3157c8;
+  font-weight: bold;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.university-card a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  color: #747d8f;
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}

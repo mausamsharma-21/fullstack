@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Students</title>
+</head>
+<body>
+  <h1>Student List</h1>
+
+  <a href="/">Home</a>
+  <a href="/add-student">Add Student</a>
+
+  <ul>
+    <% students.forEach(student => { %>
+      <li>
+        <strong><%= student.name %></strong>
+        - <%= student.course %>
+
+        <a href="/student/<%= student.id %>">
+          View Details
+        </a>
+
+        <form
+          action="/delete-student/<%= student.id %>"
+          method="POST"
+          style="display:inline;"
+        >
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+
+  <% if (students.length === 0) { %>
+    <p>No students available.</p>
+  <% } %>
+</body>
+</html>

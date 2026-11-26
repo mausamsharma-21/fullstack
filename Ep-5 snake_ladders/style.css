@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.game-info {
+    background: #eef1ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#turn {
+    color: #4c51bf;
+    margin-bottom: 8px;
+}
+
+#message {
+    color: #555;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 4px solid #333;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.cell {
+    aspect-ratio: 1;
+    border: 1px solid #aaa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: clamp(10px, 2vw, 16px);
+}
+
+.cell:nth-child(odd) {
+    background: #d9f99d;
+}
+
+.cell:nth-child(even) {
+    background: #fef3c7;
+}
+
+.number {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    font-size: 11px;
+    color: #333;
+}
+
+.marker {
+    font-size: clamp(12px, 2.5vw, 21px);
+}
+
+.tokens {
+    display: flex;
+    gap: 3px;
+    margin-top: 5px;
+    font-size: clamp(12px, 2.5vw, 20px);
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+#dice {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#restartBtn {
+    background: #e05252;
+}
+
+#restartBtn:hover {
+    background: #b91c1c;
+}
+
+.player-info {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 8px;
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .number {
+        font-size: 9px;
+    }
+}
